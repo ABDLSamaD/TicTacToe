@@ -1,0 +1,180 @@
+/* font-family: 'Tilt Prism', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Prism&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
+    background-size: cover;
+}
+
+.m-t{
+    margin-top: 10px;
+}
+
+nav{
+    height: 3em;
+    background: rgb(32 7 32 / 98%);
+    padding: 8px;
+}
+nav h1{
+    font-size: 1.9rem;
+    margin-left: 10px;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.gameContainer{
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    position: relative;
+    top: 4rem;
+    background: radial-gradient(#2b2b2b, transparent);
+    box-shadow: 2px 1px 9px rgb(55 3 3 / 19%);
+    padding: 1em;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tilt Prism', cursive;
+    border: 2px solid rgb(22, 22, 22);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.box:hover{
+    background: rgba(163, 126, 163, 0.227);
+}
+.boxText{
+    font-size: 7vw;
+    text-shadow: 1px 2px 4px snow;
+}
+
+.gameInfo{
+    width: 40vw;
+    margin: 2px 3px;
+    padding: 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.gameInfo h1{
+    font-size: 2em;
+    color: aliceblue;
+    font-family: "Popins",sans-serif;
+    text-shadow: 1px 2px 5px grey;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.info{
+    font-size: 1.2em;
+    font-family: "Popins",sans-serif;
+    color: aquamarine;
+    text-transform: uppercase;
+}
+
+#reset{
+    margin-left: 1em;
+    padding: 3px 18px;
+    background-color: rgba(161, 161, 161, 0.568);
+    outline: none;
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.b-t{
+    border-top: 0;
+}
+.b-l{
+    border-left: 0;
+}
+.b-r{
+    border-right: 0;
+}
+.b-b{
+    border-bottom: 0;
+}
+
+.line{
+    position: absolute;
+    /* left: 0; */
+    background: radial-gradient(#2b2b2b, rgb(252, 233, 233));
+    width: 0;
+    height: 3px;
+    transition: all 1s ease-in-out;
+}
+
+
+@media screen and (max-width:800px) {
+    body{
+        background-size: auto;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        height: 100%;
+    }
+    nav{
+        padding: 0;
+        height: 100%;
+    }
+    nav h1{
+        font-size: 1.5em;
+    }
+    .gameContainer{
+        width: 60vw;
+        flex-wrap: wrap;
+    }
+    .container{
+        place-content: center;
+        grid-template-columns: repeat(3, 12vw);
+        grid-template-rows: repeat(3, 12vw);
+    }
+    .gameInfo{
+        width: 60vw;
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gameInfo h1{
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width:470px){
+    .gameContainer{
+        width: 80vw;
+        height: 100%;
+    } 
+    .container{
+        grid-template-columns: repeat(3, 14vw);
+        grid-template-rows: repeat(3, 14vw);
+    }
+    .gameInfo{
+        width: 80vw;
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gameInfo h1{
+        font-size: 1em;
+    }
+}
